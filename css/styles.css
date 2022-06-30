@@ -837,6 +837,10 @@ button {
   resize: none;
   padding: 12px 16px;
   margin-top: 4px;
+  outline: none;
+}
+.modal-text-area:focus {
+  border-color: var(--accent-color);
 }
 .close {
   fill: #000000;
@@ -870,7 +874,7 @@ button {
 .modal-input:focus {
   border-color: var(--accent-color);
 }
-.modal-input:focus + icon-wrap {
+.modal-input:focus + .icon-wrap {
   fill: var(--accent-color);
 }
 .input-wrap {
@@ -891,32 +895,19 @@ button {
   display: block;
   position: relative;
 }
-.icon-checkbox {
-  position: absolute;
-  margin-top: 20px;
-  left: 0;
-  top: 100%;
-  transform: translateY(-100%);
-}
-.checkbox {
+
+.input-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
-.checkbox-wrap {
-  position: absolute;
-}
-.input-checkbox {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
 
-  background-image: url(../images/icons.svg.svg#icon-vector);
+.input-checkbox:checked + .icon-checkbox {
+  background-image: url(../images/icons.svg.svg#icon-check);
 }
-.input-checkbox:checked + .input-checkbox {
-  background-image: url(../images/icons.svg.svg#icon-heck);
+.input-checkbox:checked + icon-check-box {
+  background-color: var(--accent-color);
 }
 .checkbox-name {
   font-weight: 400;

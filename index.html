@@ -490,14 +490,17 @@
             placeholder="Введите текст"
           ></textarea>
         </label>
-        <label class="checkbox-name option"
-          >Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+        <label class="checkbox-name option"></label>
+        <input type="checkbox" name="privacy" id="privacy" class="input-checkbox" />
           <span class="checkbox-wrap">
-            <input type="checkbox" name="privacy" id="privacy" class="input-checkbox" />
             <svg class="icon-checkbox" width="16" height="15">
               <use href="./images/icons.svg.svg#icon-square"></use>
             </svg>
+            <svg class="icon-check-box" width="16" height="15">
+              <use href="./images/icons.svg.svg#icon-check"></use>
+            </svg>
           </span>
+          Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
         </label>
         <button tape="submit" class="modal-btn">Отправить</button>
       </div>
