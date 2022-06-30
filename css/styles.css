@@ -625,9 +625,6 @@ button {
 
 /* footer */
 .fooret {
-  display: flex;
-  align-items: baseline;
-
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -637,6 +634,7 @@ button {
   align-items: baseline;
 }
 .footer-box {
+  flex-grow: 1;
   margin-right: 70px;
 }
 .logo-footer {
@@ -740,8 +738,6 @@ button {
 }
 .modal-label {
   display: block;
-  margin-left: 93px;
-  margin-top: 20px;
 }
 .subscribe-button {
   display: flex;
@@ -753,6 +749,9 @@ button {
   color: var(--second-accent-color);
   border: transparent;
   margin-left: 12px;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .modal-subscribe {
   background-color: transparent;
@@ -770,18 +769,7 @@ button {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.modal-input {
-  padding: 11px 12px;
-}
-.modal-text-area {
-  width: 100%;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  resize: none;
-  padding: 12px 16px;
-  margin-top: 4px;
-}
+
 .my-subscribe {
   fill: #ffffff;
   margin-left: 10px;
@@ -840,6 +828,16 @@ button {
   top: 8px;
   right: 8px;
 }
+
+.modal-text-area {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  margin-top: 4px;
+}
 .close {
   fill: #000000;
 }
@@ -865,6 +863,8 @@ button {
   background-color: transparent;
   margin-bottom: 10px;
   margin-top: 4px;
+  padding: 11px 12px;
+  outline: none;
 }
 
 .modal-input:focus {
@@ -887,9 +887,25 @@ button {
   top: 50%;
   transform: translateY(-50%);
 }
-.checkbox-wrap {
+.option {
   display: block;
   position: relative;
+}
+.icon-checkbox {
+  position: absolute;
+  margin-top: 20px;
+  left: 0;
+  top: 100%;
+  transform: translateY(-100%);
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.checkbox-wrap {
+  position: absolute;
 }
 .input-checkbox {
   position: absolute;
@@ -897,10 +913,10 @@ button {
   top: 50%;
   transform: translateY(-50%);
 
-  background-color: var(--title-text-color);
+  background-image: url(../images/icons.svg.svg#icon-vector);
 }
-.input-checkbox:checked {
-  background-color: var(--accent-color);
+.input-checkbox:checked + .input-checkbox {
+  background-image: url(../images/icons.svg.svg#icon-heck);
 }
 .checkbox-name {
   font-weight: 400;
