@@ -906,7 +906,7 @@ button {
 .input-checkbox:checked + .icon-checkbox {
   background-image: url(../images/icons.svg.svg#icon-check);
 }
-.input-checkbox:checked + icon-check-box {
+.input-checkbox:checked + .icon-check-box {
   background-color: var(--accent-color);
 }
 .checkbox-name {
