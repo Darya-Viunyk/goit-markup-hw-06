@@ -833,6 +833,7 @@ button {
 }
 
 .modal-text-area {
+  display: block;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -845,8 +846,20 @@ button {
 .modal-text-area:focus {
   border-color: var(--accent-color);
 }
+.checkbox-span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  outline: 2px solid var(--title-text-color);
+  outline-offset: -2px;
+  border-radius: 2px;
+}
 .close {
   fill: #000000;
+}
+.close:hover {
+  fill: #2196f3;
 }
 .modal-header {
   font-weight: 700;
@@ -868,9 +881,9 @@ button {
   width: 100%;
   height: 40px;
   background-color: transparent;
-  margin-bottom: 10px;
+
   margin-top: 4px;
-  padding: 11px 12px;
+  padding: 12px 42px 12px;
   outline: none;
 }
 
@@ -880,10 +893,7 @@ button {
 .modal-input:focus + .icon-wrap {
   fill: var(--accent-color);
 }
-.input-wrap {
-  display: block;
-  position: relative;
-}
+
 .icon-wrap {
   transition-property: fill;
   transition-duration: 250ms;
@@ -891,8 +901,7 @@ button {
 
   position: absolute;
   left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 11px;
 }
 .option {
   display: block;
@@ -905,19 +914,28 @@ button {
   appearance: none;
   position: absolute;
 }
-
-.input-checkbox:checked + .icon-checkbox {
-  background-image: url(../images/icons.svg.svg#icon-check);
+.icon-check-box {
+  opacity: 0;
 }
-.input-checkbox:checked + .icon-check-box {
+.input-checkbox:checked + .checkbox-span {
   background-color: var(--accent-color);
+  outline-color: var(--accent-color);
+}
+.input-checkbox:checked + .checkbox-span .icon-check-box {
+  background-color: var(--accent-color);
+
+  opacity: 1;
 }
 .checkbox-name {
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
+  margin-top: 20px;
+  margin-bottom: 30px;
   color: #757575;
 }
 .checkbox-name a {
@@ -959,12 +977,12 @@ button {
   color: #ffffff;
 }
 .modal-name {
-  font-weight: 400;
+  display: block;
   font-size: 12px;
   line-height: 1.17;
-
+  margin-bottom: 10px;
   letter-spacing: 0.01em;
-
+  position: relative;
   color: #757575;
 }
 /* второй цвет текста #212121 */
